@@ -41,14 +41,15 @@ const CovidData = () => {
                 keyExtractor={(item) => item.province}
                 renderItem={({ item }) => (
                     <View>
-                        <Text>Province : {item.province}</Text>
-                        <Text>New Case :{item.new_case}</Text>
-                        <Text>New Case Exclude abroad :{item.new_case_excludeabroad}</Text>
-                        <Text>New Deaths :{item.new_death}</Text>
-                        <Text>Total Deaths :{item.total_death}</Text>
-                        <Text>Total Case :{item.total_case}</Text>
-                        <Text>Date : {item.update_date}</Text>
-                        <Text>____________________________________________________</Text>
+                        <Text style={{fontSize:18,fontWeight:"bold",backgroundColor:"#252B48",padding:10,color:"#fff"}}>Province : {item.province}</Text>
+                        <Text style={{fontStyle:"italic",fontWeight:"bold",backgroundColor:"#75C2F6"}}></Text>
+                        <Text style={{fontStyle:"italic",fontWeight:"bold",backgroundColor:"#F7E987",padding:5}}>New Case : {item.new_case}</Text>
+                        <Text style={{fontStyle:"italic",fontWeight:"bold",backgroundColor:"#F7E987",padding:5}}>New Case Exclude abroad : {item.new_case_excludeabroad}</Text>
+                        <Text style={{fontStyle:"italic",fontWeight:"bold",backgroundColor:"#F7E987",padding:5}}>New Deaths : {item.new_death}</Text>
+                        <Text style={{fontStyle:"italic",fontWeight:"bold",backgroundColor:"#F7E987",padding:5}}>Total Deaths : {item.total_death}</Text>
+                        <Text style={{fontStyle:"italic",fontWeight:"bold",backgroundColor:"#F7E987",padding:5}}>Total Case : {item.total_case}</Text>
+                        <Text style={{fontStyle:"italic",fontWeight:"bold",backgroundColor:"#F7E987",padding:5}}>Date : {item.update_date}</Text>
+                        <Text></Text>
                     </View>
                 )}
             />
@@ -60,9 +61,10 @@ const CovidData = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFF5E0',
-        alignItems: 'center',
-        justifyContent: 'center',
+        backgroundColor: '#5B9A8B',
+        //alignItems: 'center',
+        //justifyContent: 'center',
+        padding : 10,
     },
 });
 
