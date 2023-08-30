@@ -13,13 +13,14 @@ const AppNavigator = () => {
                     name="CovidData"
                     component={CovidData}
                     options={{
-                        title: 'Covid-19 Data',
+                        title: 'COVID-19 Data',
                         headerStyle: {
                             backgroundColor: '#252B48', 
                         },
                         headerTintColor: '#fff', 
                         headerTitleStyle: {
                             fontWeight: 'bold',
+                            fontSize: 20,
                         },
                     }}
                 />

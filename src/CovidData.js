@@ -42,15 +42,13 @@ const CovidData = () => {
     return (
         <ScrollView contentContainerStyle={styles.container}>
             {error && <Text style={{ color: "red" }}>Error: {error}</Text>}
-            <View style={{ margin: 2 }}>
-                
+            <View style={{ margin: -8 }}>
                 <TextInput
-                    placeholder="Search by Province"
+                    placeholder="🔍 Search by Province"
                     style={styles.input}
                     onChangeText={(text) => setSearchProvince(text)}
                     value={searchProvince}
                 />
-                <Button title="Filter" onPress={() => setSearchProvince(searchProvince)} />
             </View>
             <FlatList
                 data={filteredData.length ? filteredData : provinceData}
@@ -58,7 +56,7 @@ const CovidData = () => {
                 renderItem={({ item }) => (
                     <View style={{ margin: 15 }}>
                         <Text style={{ fontSize: 18, fontWeight: "bold", backgroundColor: "#252B48", padding: 10, color: "#fff" }}>Province : {item.province}</Text>
-                        <Text style={{ fontStyle: "italic", fontWeight: "bold", backgroundColor: "#75C2F6" }}></Text>
+                        <Text style={{ fontStyle: "italic", fontWeight: "bold", backgroundColor: "#445069" }}></Text>
                         <Text style={{ fontStyle: "italic", fontWeight: "bold", backgroundColor: "#F7E987", padding: 5 }}>New Case : {item.new_case}</Text>
                         <Text style={{ fontStyle: "italic", fontWeight: "bold", backgroundColor: "#F7E987", padding: 5 }}>New Case Exclude abroad : {item.new_case_excludeabroad}</Text>
                         <Text style={{ fontStyle: "italic", fontWeight: "bold", backgroundColor: "#F7E987", padding: 5 }}>New Deaths : {item.new_death}</Text>
@@ -77,7 +75,6 @@ const CovidData = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-
         backgroundColor: '#5B9A8B',
         padding: 10,
     },
@@ -89,12 +86,13 @@ const styles = StyleSheet.create({
     },
     input: {
         margin: 20,
-        height: 40,
+        height: 45,
         borderColor: 'gray',
-        borderWidth: 1,
-        borderRadius: 5,
+        borderWidth: 0,
+        borderRadius: 15,
         padding: 10,
-        marginBottom: 10,
+        marginBottom: 30,
+        fontSize: 15,
         backgroundColor:'#fff'
     },
 });
